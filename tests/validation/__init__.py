@@ -1,0 +1,1 @@
+"""System validation tests for the Godly AI system."""

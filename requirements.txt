@@ -1,0 +1,32 @@
+# Core neuromorphic frameworks
+jax>=0.4.0
+jaxlib>=0.4.0
+# Note: spyx may need to be installed separately or from source
+
+# Core scientific computing
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Storage and data management
+redis>=5.0.0
+h5py>=3.9.0
+networkx>=3.1
+
+# Performance optimization
+numba>=0.58.0
+
+# Visualization and monitoring
+matplotlib>=3.7.0
+plotly>=5.15.0
+
+# Configuration management
+pydantic>=2.0.0
+
+# Testing framework
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Code quality tools
+black>=23.7.0
+isort>=5.12.0
+flake8>=6.0.0
