@@ -54,21 +54,34 @@ The Godly AI System implements a 5-layer hybrid spiking-reservoir architecture:
 ## 🛠️ Technology Stack
 
 ### Core Frameworks
-- **Primary**: JAX 0.4+ + Spyx (Custom Extensions)
-- **Secondary**: Lava, Nengo, SpikingJelly (Integration)
-- **Runtime**: Python 3.11+, NumPy 1.24+, SciPy 1.10+
+- **Primary**: JAX 0.6+ + Spyx 0.1.19+ (Spiking Neural Networks)
+- **Secondary**: Nengo 4.0+, SpikingJelly 0.0.0.0.14+ (Integration)
+- **Neural Networks**: Flax 0.11+ (JAX-based neural network library)
+- **Runtime**: Python 3.11+, NumPy 2.1+, SciPy 1.10+
 
 ### Storage & Performance
-- **Memory**: Redis (real-time), SQLite (persistent), HDF5 (large-scale)
-- **Optimization**: Intel MKL, OpenMP, Numba JIT compilation
-- **Monitoring**: TensorBoard, Weights & Biases, Plotly
+- **Memory**: Redis 5.0+ (real-time), HDF5 3.9+ (large-scale datasets)
+- **Optimization**: JAX JIT compilation, XLA acceleration
+- **Monitoring**: TensorBoard 2.13+, Plotly 5.15+ (visualization)
+
+### Web & API
+- **Framework**: FastAPI 0.100+ (high-performance async API)
+- **Server**: Uvicorn 0.23+ (ASGI server)
+- **Configuration**: Pydantic 2.0+ (data validation and settings)
+
+### Development Tools
+- **Dependency Management**: Poetry 2.1+ (modern Python packaging)
+- **Code Quality**: Black 23.7+, isort 5.12+, flake8 6.0+
+- **Type Checking**: MyPy 1.5+ (static type analysis)
+- **Testing**: pytest 7.4+ with coverage and benchmarking
+- **Git Hooks**: pre-commit 3.3+ (automated code quality checks)
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Python 3.11+
-- Poetry (for dependency management)
-- Git
+- **Python 3.11+** (Required for modern neuromorphic frameworks)
+- **Poetry 2.1+** (Dependency management and virtual environments)
+- **Git** (Version control)
 
 ### Installation
 
@@ -78,25 +91,107 @@ The Godly AI System implements a 5-layer hybrid spiking-reservoir architecture:
    cd Godly-AI
    ```
 
-2. **Install dependencies with Poetry**
+2. **Install Poetry** (if not already installed)
    ```bash
+   # On Windows (PowerShell)
+   (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python -
+   
+   # On macOS/Linux
+   curl -sSL https://install.python-poetry.org | python3 -
+   
+   # Add Poetry to PATH and restart terminal
+   ```
+
+3. **Verify Poetry installation**
+   ```bash
+   poetry --version  # Should show Poetry (version 2.1.4+)
+   ```
+
+4. **Install project dependencies**
+   ```bash
+   # Install all dependencies (main + dev)
    poetry install
+   
+   # Or install only main dependencies
+   poetry install --only main
    ```
 
-3. **Activate the virtual environment**
+5. **Verify core packages**
    ```bash
+   poetry run python -c "import jax, numpy, flax, spyx, fastapi, nengo; print('✓ All core packages working!')"
+   ```
+
+6. **Activate the virtual environment**
+   ```bash
+   # Option 1: Spawn a shell within the virtual environment
    poetry shell
+   
+   # Option 2: Run commands with poetry run
+   poetry run python your_script.py
    ```
 
-4. **Install pre-commit hooks**
+7. **Install pre-commit hooks**
    ```bash
-   pre-commit install
+   poetry run pre-commit install
    ```
 
-5. **Run tests to verify installation**
+8. **Run tests to verify installation**
    ```bash
-   pytest tests/
+   poetry run pytest tests/
    ```
+
+### Poetry Configuration Details
+
+Our project uses Poetry for robust dependency management with the following configuration:
+
+#### Core Dependencies
+- **JAX 0.6+** & **JAXlib 0.6+**: High-performance neuromorphic computing
+- **NumPy 2.1+**: Scientific computing with latest performance improvements
+- **Flax 0.11+**: Neural network library for JAX
+- **Spyx 0.1.19+**: Spiking neural networks in JAX
+- **FastAPI 0.100+**: High-performance web framework
+- **Nengo 4.0+**: Neuromorphic simulation framework
+
+#### Development Dependencies
+- **pytest 7.4+**: Testing framework
+- **black 23.7+**: Code formatting
+- **mypy 1.5+**: Static type checking
+- **pre-commit 3.3+**: Git hooks for code quality
+
+#### Temporarily Disabled Dependencies
+Some packages are temporarily commented out due to Python 3.13 compatibility issues:
+- `lava-nc`: Neuromorphic framework (Python <3.11 requirement)
+- `numba`: JIT compilation (llvmlite build issues)
+- `wandb`: Experiment tracking (pathtools dependency issues)
+
+These will be re-enabled as compatibility improves.
+
+### Common Poetry Commands
+
+```bash
+# Dependency management
+poetry add package_name              # Add new dependency
+poetry add --group dev package_name  # Add development dependency
+poetry remove package_name           # Remove dependency
+poetry update                        # Update all dependencies
+poetry show                          # List installed packages
+poetry show --tree                   # Show dependency tree
+
+# Environment management
+poetry env info                      # Show environment info
+poetry env list                      # List available environments
+poetry shell                         # Activate virtual environment
+poetry run command                   # Run command in virtual environment
+
+# Project management
+poetry check                         # Validate pyproject.toml
+poetry build                         # Build distribution packages
+poetry publish                       # Publish to PyPI (when ready)
+
+# Lock file management
+poetry lock                          # Generate/update poetry.lock
+poetry install --sync               # Sync environment with lock file
+```
 
 ### Basic Usage
 
