@@ -192,7 +192,39 @@ The Godly AI system is a neuromorphic artificial intelligence architecture that 
 - Gradient-based methods
 - Population-based training
 
-### 6. Training and Evolution
+### 6. Intrinsic Motivation System
+
+#### Curiosity-Driven Exploration
+- **Location**: `src/agents/exploration/`
+- **Purpose**: Autonomous exploration based on novelty detection and interest modeling
+- **Key Features**:
+  - Prediction error-based novelty detection
+  - Interest region modeling with adaptive learning
+  - Goal generation from curiosity and interest
+  - Exploration vs exploitation decisions
+  - Episode-based exploration management
+
+#### Goal Emergence and Planning
+- **Location**: `src/agents/planning/`
+- **Purpose**: Automatic goal generation from behavioral patterns
+- **Key Features**:
+  - Behavioral pattern recognition
+  - Goal formulation from patterns
+  - Resource-constrained planning
+  - Multi-type goal generation (skill, exploration, optimization)
+  - Planning recommendations and execution
+
+#### Internal Reward System
+- **Location**: `src/agents/exploration/internal_reward.py`, `reward_system.py`
+- **Purpose**: Intrinsic reward generation for learning enhancement
+- **Key Features**:
+  - Multi-type reward signals (novelty, competence, curiosity, surprise, progress)
+  - Reward prediction with surprise detection
+  - Learning integration and adaptation
+  - Reward-based policy updates
+  - Comprehensive reward statistics
+
+### 7. Training and Evolution
 
 #### Topology Evolution
 - **Location**: `src/training/evolution/topology_evolution.py`
@@ -230,8 +262,9 @@ The Godly AI system is a neuromorphic artificial intelligence architecture that 
 1. **Input Processing**: Multi-modal inputs processed by specialized reasoning cores
 2. **Memory Integration**: Information stored and retrieved from appropriate memory systems
 3. **Cross-Modal Sync**: Different modalities synchronized and integrated
-4. **Meta-Learning**: System adapts learning strategies based on performance
-5. **Evolution**: Network topology and parameters evolved for optimization
+4. **Intrinsic Motivation**: Novelty detection, goal emergence, and reward generation drive autonomous behavior
+5. **Meta-Learning**: System adapts learning strategies based on performance and intrinsic rewards
+6. **Evolution**: Network topology and parameters evolved for optimization
 
 ### Communication Patterns
 - **Peer-to-peer**: Direct communication between reasoning cores
