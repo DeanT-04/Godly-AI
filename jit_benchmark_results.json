@@ -1,0 +1,132 @@
+{
+  "system_info": {
+    "platform": "Windows-11-10.0.26100-SP0",
+    "processor": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+    "cpu_count": 16,
+    "python_version": "3.13.6",
+    "numpy_version": "2.3.2",
+    "numba_available": false
+  },
+  "jit_info": {
+    "numba_available": false,
+    "jit_enabled": false,
+    "cache_enabled": true,
+    "parallel_enabled": true,
+    "fastmath_enabled": true,
+    "compiled_functions": 0
+  },
+  "benchmarks": {
+    "spike_processing": {
+      "50": {
+        "jit_time": 0.0019479990005493164,
+        "python_time": 0.0019218921661376953,
+        "speedup": 0.9865981274095833,
+        "data_size": 10000
+      },
+      "100": {
+        "jit_time": 0.0037758588790893556,
+        "python_time": 0.003913760185241699,
+        "speedup": 1.0365218379627583,
+        "data_size": 20000
+      },
+      "200": {
+        "jit_time": 0.008449172973632813,
+        "python_time": 0.008992362022399902,
+        "speedup": 1.0642890198203079,
+        "data_size": 40000
+      },
+      "500": {
+        "jit_time": 0.02150270938873291,
+        "python_time": 0.020912718772888184,
+        "speedup": 0.9725620336870725,
+        "data_size": 100000
+      }
+    },
+    "reservoir_update": {
+      "100": {
+        "jit_time": 2.2935867309570313e-05,
+        "python_time": 1.5354156494140626e-05,
+        "speedup": 0.6694386694386695,
+        "data_size": 40000
+      },
+      "200": {
+        "jit_time": 6.361007690429688e-05,
+        "python_time": 6.153583526611329e-05,
+        "speedup": 0.9673913043478262,
+        "data_size": 160000
+      },
+      "500": {
+        "jit_time": 0.00035283565521240237,
+        "python_time": 0.0002687931060791016,
+        "speedup": 0.7618082302858301,
+        "data_size": 1000000
+      },
+      "1000": {
+        "jit_time": 0.0009410381317138672,
+        "python_time": 0.0009657144546508789,
+        "speedup": 1.0262224474284267,
+        "data_size": 4000000
+      }
+    },
+    "convolution": {
+      "100": {
+        "jit_time": 0.00037624835968017576,
+        "python_time": 0.00035688877105712893,
+        "speedup": 0.9485457195361512,
+        "data_size": 8000
+      },
+      "200": {
+        "jit_time": 0.0004720926284790039,
+        "python_time": 0.0004455804824829102,
+        "speedup": 0.9438412201403971,
+        "data_size": 16000
+      },
+      "500": {
+        "jit_time": 0.0007097721099853516,
+        "python_time": 0.0006291627883911133,
+        "speedup": 0.8864292912327847,
+        "data_size": 40000
+      },
+      "1000": {
+        "jit_time": 0.0011974334716796874,
+        "python_time": 0.001201295852661133,
+        "speedup": 1.0032255495380695,
+        "data_size": 80000
+      }
+    },
+    "matrix_multiply": {
+      "100": {
+        "jit_time": 7.624626159667969e-05,
+        "python_time": 7.393360137939454e-05,
+        "speedup": 0.9696685428392746,
+        "gflops_jit": 26.230794246404002,
+        "gflops_python": 27.05129958078039,
+        "data_size": 10000
+      },
+      "200": {
+        "jit_time": 0.00025126934051513674,
+        "python_time": 0.00025961399078369143,
+        "speedup": 1.033209981971724,
+        "gflops_jit": 63.67669038808235,
+        "gflops_python": 61.629960510607035,
+        "data_size": 40000
+      },
+      "500": {
+        "jit_time": 0.0010092020034790038,
+        "python_time": 0.0010793685913085937,
+        "speedup": 1.0695268019561057,
+        "gflops_jit": 247.72047532424583,
+        "gflops_python": 231.61689344407142,
+        "data_size": 250000
+      },
+      "1000": {
+        "jit_time": 0.007616424560546875,
+        "python_time": 0.008268046379089355,
+        "speedup": 1.0855548181909245,
+        "gflops_jit": 262.59040368626665,
+        "gflops_python": 241.89511140844382,
+        "data_size": 1000000
+      }
+    }
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "system_info": {
+    "platform": "Windows-11-10.0.26100-SP0",
+    "processor": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+    "cpu_count": 16,
+    "python_version": "3.13.6",
+    "jax_version": "0.7.0",
+    "numpy_version": "2.3.2"
+  },
+  "mkl_info": {
+    "mkl_available": false,
+    "num_threads": null,
+    "thread_affinity": "balanced",
+    "precision_mode": "high"
+  },
+  "benchmarks": {
+    "matrix_operations": {
+      "100": {
+        "baseline_time": 0.00016388893127441406,
+        "optimized_time": 8.132457733154297e-05,
+        "speedup": 2.0152447962474347,
+        "gflops_baseline": 12.20338667442537,
+        "gflops_optimized": 24.592811492231014
+      },
+      "500": {
+        "baseline_time": 0.0022817373275756834,
+        "optimized_time": 0.0018867969512939454,
+        "speedup": 1.2093179003765573,
+        "gflops_baseline": 109.56563535103393,
+        "gflops_optimized": 132.49968409613587
+      },
+      "1000": {
+        "baseline_time": 0.015419268608093261,
+        "optimized_time": 0.015975260734558107,
+        "speedup": 0.9651966790587581,
+        "gflops_baseline": 129.70783834391733,
+        "gflops_optimized": 125.19357481743926
+      },
+      "2000": {
+        "baseline_time": 0.11914381980895997,
+        "optimized_time": 0.11977577209472656,
+        "speedup": 0.9947238721594981,
+        "gflops_baseline": 134.2914808813,
+        "gflops_optimized": 133.58294186027996
+      }
+    },
+    "spike_processing": {
+      "batch_10_time_100": {
+        "batch_size": 10,
+        "time_steps": 100,
+        "baseline_time": 0.015224647521972657,
+        "optimized_time": 0.07232766151428223,
+        "speedup": 0.21049550342459658
+      },
+      "batch_10_time_500": {
+        "batch_size": 10,
+        "time_steps": 500,
+        "baseline_time": 0.01680102348327637,
+        "optimized_time": 0.07717108726501465,
+        "speedup": 0.21771137454082595
+      },
+      "batch_10_time_1000": {
+        "batch_size": 10,
+        "time_steps": 1000,
+        "baseline_time": 0.017567205429077148,
+        "optimized_time": 0.08319330215454102,
+        "speedup": 0.2111612951297938
+      },
+      "batch_50_time_100": {
+        "batch_size": 50,
+        "time_steps": 100,
+        "baseline_time": 0.015172147750854492,
+        "optimized_time": 0.07138452529907227,
+        "speedup": 0.21254113111054998
+      },
+      "batch_50_time_500": {
+        "batch_size": 50,
+        "time_steps": 500,
+        "baseline_time": 0.025272417068481445,
+        "optimized_time": 0.09142422676086426,
+        "speedup": 0.2764301975950618
+      },
+      "batch_50_time_1000": {
+        "batch_size": 50,
+        "time_steps": 1000,
+        "baseline_time": 0.037894678115844724,
+        "optimized_time": 0.11631011962890625,
+        "speedup": 0.32580723187930466
+      },
+      "batch_100_time_100": {
+        "batch_size": 100,
+        "time_steps": 100,
+        "baseline_time": 0.01672964096069336,
+        "optimized_time": 0.07245492935180664,
+        "speedup": 0.23089720893194426
+      },
+      "batch_100_time_500": {
+        "batch_size": 100,
+        "time_steps": 500,
+        "baseline_time": 0.03716268539428711,
+        "optimized_time": 0.11513581275939941,
+        "speedup": 0.3227725978879082
+      },
+      "batch_100_time_1000": {
+        "batch_size": 100,
+        "time_steps": 1000,
+        "baseline_time": 0.06883420944213867,
+        "optimized_time": 0.22292876243591309,
+        "speedup": 0.30877222252524245
+      }
+    },
+    "reservoir_computation": {
+      "500": {
+        "baseline_time": 0.0061647891998291016,
+        "optimized_time": 0.0003875255584716797,
+        "speedup": 15.908084163898117
+      },
+      "1000": {
+        "baseline_time": 0.008447360992431641,
+        "optimized_time": 0.0036263465881347656,
+        "speedup": 2.329441157133465
+      },
+      "2000": {
+        "baseline_time": 0.022537422180175782,
+        "optimized_time": 0.017925596237182616,
+        "speedup": 1.257276013694148
+      }
+    },
+    "eigenvalue_computation": {
+      "100": {
+        "baseline_time": 0.007155466079711914,
+        "optimized_time": 0.007276058197021484,
+        "speedup": 0.9834261747165608
+      },
+      "500": {
+        "baseline_time": 0.16466898918151857,
+        "optimized_time": 0.1671523094177246,
+        "speedup": 0.9851433686746136
+      },
+      "1000": {
+        "baseline_time": 0.8174989223480225,
+        "optimized_time": 0.7924232006072998,
+        "speedup": 1.0316443558460997
+      }
+    }
+  }
+}
