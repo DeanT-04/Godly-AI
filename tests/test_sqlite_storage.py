@@ -13,6 +13,9 @@ import numpy as np
 import jax.numpy as jnp
 from pathlib import Path
 from unittest.mock import patch, Mock
+import logging
+
+logger = logging.getLogger(__name__)
 
 from src.storage.sqlite_storage import (
     SQLiteStorage, SQLiteStorageError, Episode, Concept, LearningEvent
